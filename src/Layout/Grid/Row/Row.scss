@@ -1,0 +1,18 @@
+.ui {
+	
+	&-row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+		&-align-items-center {
+			align-items: center;
+		}
+		
+		&-justify-content-end {
+			justify-content: flex-end;
+		}
+		
+	}
+	
+}

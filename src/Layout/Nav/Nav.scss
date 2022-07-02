@@ -1,0 +1,24 @@
+@import "../../Assets/Styles/Config/variables";
+@import "../../Assets/Styles/Config/colors";
+@import "../../Assets/Styles/Utilities/mixins";
+
+.nav {
+	flex: 0 0 auto;
+	width: 100%;
+	align-content: center;
+	max-width: 100%;
+	padding: 1.25rem 3rem;
+	background-color: $darkest-grey;
+	
+	&-branding {
+		flex: 0 0 auto;
+		width: 25%;
+		max-width: 100%;
+		@include comfortaa {
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: white;
+		}
+	}
+	
+}

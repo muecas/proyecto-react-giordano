@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/**
+ * Fontface mixin
+ * @param string $weight Font family
+ * @param int    $weight Font weight
+ * @param type   $style  Font Style
+ * @return rule
+ */
+
+@mixin font-face($family, $weight: 400, $style: normal, $fallback: sans-serif) {
+	font-family: '#{$family}', $fallback;
+	font-weight: $weight;
+	font-style: $style;
+	@content;
+}
+
+/**
+ * Comfortaa mixin
+ * @param int  $weight Font weight
+ * @param type $style  Font Style
+ * @return rule
+ */
+
+@mixin comfortaa($weight: $font-weight-light, $style: normal) {
+	@include font-face('Comfortaa', $weight, $style) {
+		@content;
+	};
+}
+
+/**
+ * Rajdhani mixin
+ * @param int  $weight Font weight
+ * @param type $style  Font Style
+ * @return rule
+ */
+
+@mixin rajdhani($weight: $font-weight-light, $style: normal) {
+	@include font-face('Rajdhani', $weight, $style) {
+		@content;
+	};
+}
+
+/**
+ * Input placeholder styles
+ */
+
+@mixin placeholder() {
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&:-ms-input-placeholder,
+	&:-moz-placeholder,
+	&::placeholder {
+		@content;
+	}
+}
+
+/**
+ * Last child margin reset
+ * @param property $property
+ */
+
+@mixin last-child($property: margin-bottom, $value: 0) {
+	&:last-child {
+		#{$property}: $value;
+		@content;
+	}
+}

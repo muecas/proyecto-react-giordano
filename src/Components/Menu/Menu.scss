@@ -1,0 +1,59 @@
+@import "../../Assets/Styles/Config/colors";
+@import "../../Assets/Styles/Config/variables";
+@import "../../Assets/Styles/Utilities/mixins";
+
+.menu {
+	
+	&-container {
+		flex: 0 0 auto;
+		width: 75%;
+		max-width: 100%;
+	}
+	
+	&-list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		list-style: none;
+		
+		&-element {
+			display: inline-flex;
+			margin-right: 15px;
+			@include last-child(margin-right);
+		
+			a {
+				display: block;
+				padding: 0.75rem 1rem;
+				border-radius: 10px;
+				transition: background-color 0.25s ease, background-color 0.25s ease;
+				color: $lightest-grey;
+				text: {
+					transform: uppercase;
+					decoration: none;
+				}
+				font: {
+					size: 1.05rem;
+					weight: $font-weight-regular;
+				}
+				
+				img {
+					width: 1.5rem;
+				}
+				
+				&:hover {
+					background-color: $lemon;
+					color: $text-color;
+				}
+				
+			}
+			
+			&-icon a:hover {
+				background-color: transparent;
+			}
+			
+		}
+		
+	}
+	
+}

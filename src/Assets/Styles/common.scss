@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Rajdhani:wght@300;400;700&display=swap');
+
+@import "./Config/variables";
+@import "./Config/colors";
+@import "./Utilities/mixins";
+@import "./Utilities/reset";
+@import "./Utilities/utilities";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	@include rajdhani {
+		color: $text-color;
+	}
+}
