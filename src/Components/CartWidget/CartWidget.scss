@@ -1,0 +1,23 @@
+@import "../../Assets/Styles/Config/colors";
+@import "../../Assets/Styles/Config/variables";
+@import "../../Assets/Styles/Utilities/mixins";
+
+.cart-widget {
+	position: relative;
+	
+	img {
+		width: 1.5rem;
+	}
+	
+	span {
+		position: absolute;
+		top: -1rem;
+		right: -1rem;
+		padding: 0.25rem 0.5rem;
+		border-radius: 50%;
+		background-color: $lemon;
+		color: $text-color;
+		font-size: 0.8rem;
+	}
+	
+}

@@ -1,0 +1,23 @@
+@import "../../Assets/Styles/Config/colors";
+@import "../../Assets/Styles/Config/variables";
+@import "../../Assets/Styles/Utilities/mixins";
+
+.item {
+	
+	&-list {
+		padding: 2rem 0;
+		
+		&-title {
+			margin-bottom: 2rem;
+			@include comfortaa {
+				text: {
+					transform: uppercase;
+					align: center;
+				}
+				font-size: 1.5rem;
+			}
+		}
+		
+	}
+	
+}

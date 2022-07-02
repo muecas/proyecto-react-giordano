@@ -37,19 +37,11 @@
 					weight: $font-weight-regular;
 				}
 				
-				img {
-					width: 1.5rem;
-				}
-				
 				&:hover {
 					background-color: $lemon;
 					color: $text-color;
 				}
 				
-			}
-			
-			&-icon a:hover {
-				background-color: transparent;
 			}
 			
 		}

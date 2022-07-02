@@ -1,9 +1,10 @@
 import Nav from '../../Layout/Nav/Nav';
 import { Menu, MenuItem } from '../Menu';
-import { Container, Row } from '../../Layout/Grid';
+import { Container, Row, Column } from '../../Layout/Grid';
+import ItemList from '../ItemList/ItemList';
 
 import '../../Assets/Styles/common.scss';
-import cartIcon from '../../Assets/Images/shopping-cart.svg';
+import CartWidget from '../CartWidget/CartWidget';
 
 /**
  * App component
@@ -20,9 +21,14 @@ function App() {
 						<MenuItem label="Productos" href="#" />
 						<MenuItem label="Empresa" href="#" />
 						<MenuItem label="Contacto" href="#" />
-						<MenuItem href="#" icon={cartIcon}></MenuItem>
+						<li><CartWidget href="#" /></li>
 					</Menu>
 				</Nav>
+			</Row>
+			<Row>
+				<Column>
+					<ItemList title="Welcome to the Shop" />
+				</Column>
 			</Row>
 		</Container>
 	);
