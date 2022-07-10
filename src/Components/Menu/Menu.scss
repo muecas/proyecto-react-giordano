@@ -19,13 +19,13 @@
 		
 		&-element {
 			display: inline-flex;
-			margin-right: 15px;
+			margin-right: 1rem;
 			@include last-child(margin-right);
 		
 			a {
 				display: block;
 				padding: 0.75rem 1rem;
-				border-radius: 10px;
+				border-radius: 0.7rem;
 				transition: background-color 0.25s ease, background-color 0.25s ease;
 				color: $lightest-grey;
 				text: {

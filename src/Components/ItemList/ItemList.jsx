@@ -2,15 +2,17 @@ import './ItemList.scss';
 
 /**
  * ItemList component
- * @param {String} title
+ * @param {String}      title
+ * @param {JSX.Element} children
  * @return {JSX.Element}
  * @constructor
  */
 
-function ItemList({ title } = { title : 'Bienvenidos' }) {
+function ItemList({ title, children } = { title : 'Bienvenidos' }) {
 	return (
 		<div className="item-list">
 			<h2 className="item-list-title">{title}</h2>
+			{children}
 		</div>
 	);
 }

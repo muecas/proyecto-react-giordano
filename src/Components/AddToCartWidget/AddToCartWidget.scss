@@ -1,0 +1,74 @@
+@import "../../Assets/Styles/Config/colors";
+@import "../../Assets/Styles/Config/variables";
+@import "../../Assets/Styles/Utilities/mixins";
+
+.add-to-cart-widget {
+	max-width: 15rem;
+	padding: 1em;
+	border-radius: 0.25rem;
+	border: 1px solid $lighter-grey;
+	
+	&-label {
+		margin-bottom: 0.75rem;
+		font: {
+			size: 1.05rem;
+			weight: $font-weight-regular;
+		}
+		text-align: center;
+	}
+	
+	&-amount {
+		display: flex;
+		flex: {
+			direction: row;
+			wrap: wrap;
+		}
+		align-items: center;
+		margin-bottom: 0.75rem;
+		
+		div {
+			flex: 1 0 auto;
+			max-width: 100%;
+			text-align: center;
+		}
+		
+		button {
+			flex: 0 0 auto;
+			width: 1.5rem;
+			max-width: 100%;
+			padding: 0.2rem 0 0.25rem;
+			border-radius: 0.25rem;
+			border: 1px solid $lighter-grey;
+			transition: opacity 0.25s ease;
+			
+			&[disabled] {
+				opacity: 0.25;
+			}
+			
+		}
+		
+	}
+	
+	&-button {
+		cursor: pointer;
+		width: 100%;
+		padding: 0.75rem;
+		background-color: $dark-lemon;
+		border-radius: 0.25rem;
+		border: none;
+		box-shadow: 0 0.25rem 0 darken($dark-lemon, 20%);
+		font-size: 0.85rem;
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+		color: darken($dark-lemon, 25%);
+		
+		&:active {
+			box-shadow: none;
+			transform: translateY(0.25rem);
+		}
+		
+	}
+	
+}

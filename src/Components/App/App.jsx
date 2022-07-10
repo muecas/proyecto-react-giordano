@@ -5,6 +5,7 @@ import ItemList from '../ItemList/ItemList';
 
 import '../../Assets/Styles/common.scss';
 import CartWidget from '../CartWidget/CartWidget';
+import AddToCartWidget from '../AddToCartWidget/AddToCartWidget';
 
 /**
  * App component
@@ -27,7 +28,9 @@ function App() {
 			</Row>
 			<Row>
 				<Column>
-					<ItemList title="Welcome to the Shop" />
+					<ItemList title="Welcome to the Shop">
+						<AddToCartWidget onAdd={(amount) => console.log(amount)} />
+					</ItemList>
 				</Column>
 			</Row>
 		</Container>

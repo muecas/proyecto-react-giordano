@@ -8,5 +8,6 @@ $darkest-grey  : #0d0d0f;
 $blackish-grey : #010101;
 
 $lemon         : #f2ff3c;
+$dark-lemon    : darken($lemon, 20%);
 
 $text-color    : $darker-grey;
