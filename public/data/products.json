@@ -1,0 +1,18 @@
+{
+	"products" : [
+		{
+			"id"          : 1,
+			"title"       : "Praesent sit amet",
+			"image"       : "http://placeimg.com/640/360/cat",
+			"description" : "Aenean vitae ullamcorper sapien, et dictum eros. In hac habitasse platea dictumst. Suspendisse feugiat dignissim maximus. Vestibulum in porta purus.",
+			"stock"       : 0
+		},
+		{
+			"id"          : 2,
+			"title"       : "Morbi porta",
+			"image"       : "http://placeimg.com/640/360/any",
+			"description" : "Aenean vitae ullamcorper sapien, et dictum eros. In hac habitasse platea dictumst. Suspendisse feugiat dignissim maximus. Vestibulum in porta purus.",
+			"stock"       : 0
+		}
+	]
+}

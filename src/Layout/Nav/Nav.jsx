@@ -1,4 +1,6 @@
 import Row from '../Grid/Row/Row'
+import { Menu, MenuItem } from '../../Components/Menu';
+import CartWidget from '../../Components/CartWidget/CartWidget';
 
 import './Nav.scss';
 
@@ -11,12 +13,19 @@ import './Nav.scss';
 
 function Nav({ children }) {
 	return (
-		<div className="nav">
-			<Row alignItems="center">
-				<div className="nav-branding">Shop branding</div>
-				{children}
-			</Row>
-		</div>
+		<Row>
+			<div className="nav">
+				<Row alignItems="center">
+					<div className="nav-branding">Shop branding</div>
+					<Menu>
+						<MenuItem label="Productos" href="#" />
+						<MenuItem label="Empresa" href="#" />
+						<MenuItem label="Contacto" href="#" />
+						<li><CartWidget href="#" /></li>
+					</Menu>
+				</Row>
+			</div>
+		</Row>
 	);
 }
 

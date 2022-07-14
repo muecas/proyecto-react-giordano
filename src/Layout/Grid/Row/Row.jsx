@@ -7,11 +7,12 @@ import './Row.scss';
  * @constructor
  */
 
-function Row({ alignItems, jusifyContent, children }) {
+function Row({ className, alignItems, jusifyContent, children }) {
 	const attributes = {
 		className : 'ui-row' +
-			(alignItems ? ` ui-row-align-items-${alignItems}` : null) +
-			(alignItems ? ` ui-row-justify-content-${jusifyContent}` : null)
+			(className ? ` ${className}` : '') +
+			(alignItems ? ` ui-row-align-items-${alignItems}` : '') +
+			(jusifyContent ? ` ui-row-justify-content-${jusifyContent}` : '')
 	};
 	return (
 		<div {...attributes}>

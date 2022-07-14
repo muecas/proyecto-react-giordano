@@ -7,9 +7,13 @@ import './Column.scss';
  * @constructor
  */
 
-function Column({ children }) {
+function Column({ className, children }) {
+	const attributes = {
+		className : 'ui-column' +
+			(className ? ` ${className}` : '')
+	};
 	return (
-		<div className="ui-column">
+		<div {...attributes}>
 			{children}
 		</div>
 	);

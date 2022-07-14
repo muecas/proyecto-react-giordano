@@ -1,11 +1,8 @@
 import Nav from '../../Layout/Nav/Nav';
-import { Menu, MenuItem } from '../Menu';
-import { Container, Row, Column } from '../../Layout/Grid';
-import ItemList from '../ItemList/ItemList';
+import { Container as GridContainer } from '../../Layout/Grid';
+import { Container as ItemListContainer } from '../ItemList';
 
 import '../../Assets/Styles/common.scss';
-import CartWidget from '../CartWidget/CartWidget';
-import AddToCartWidget from '../AddToCartWidget/AddToCartWidget';
 
 /**
  * App component
@@ -15,25 +12,10 @@ import AddToCartWidget from '../AddToCartWidget/AddToCartWidget';
 
 function App() {
 	return (
-		<Container>
-			<Row>
-				<Nav>
-					<Menu>
-						<MenuItem label="Productos" href="#" />
-						<MenuItem label="Empresa" href="#" />
-						<MenuItem label="Contacto" href="#" />
-						<li><CartWidget href="#" /></li>
-					</Menu>
-				</Nav>
-			</Row>
-			<Row>
-				<Column>
-					<ItemList title="Welcome to the Shop">
-						<AddToCartWidget onAdd={(amount) => console.log(amount)} />
-					</ItemList>
-				</Column>
-			</Row>
-		</Container>
+		<GridContainer>
+			<Nav />
+			<ItemListContainer title="Welcome to the Shop" />
+		</GridContainer>
 	);
 }
 
