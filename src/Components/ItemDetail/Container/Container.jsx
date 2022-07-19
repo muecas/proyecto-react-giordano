@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom';
 import { Row } from '../../../Layout/Grid';
 import Detail from '../Detail/Detail';
 
@@ -10,9 +11,10 @@ import './Container.scss';
  */
 
 function Container() {
+	const { slug } = useParams();
 	return (
 		<Row className="item-detail-container">
-			<Detail slug="praesent-sit-amet" />
+			<Detail slug={slug} />
 		</Row>
 	);
 }

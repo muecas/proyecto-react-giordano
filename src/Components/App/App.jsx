@@ -4,6 +4,7 @@ import Nav from '../../Layout/Nav/Nav';
 import { Container as GridContainer } from '../../Layout/Grid';
 
 import '../../Assets/Styles/common.scss';
+import AppPaths from '../../Services/Utils/AppPaths';
 
 /**
  * App component
@@ -23,6 +24,10 @@ function App() {
 					<Route index path="/" element={
 						<Suspense fallback={<div>Cargando...</div>}>
 							<ItemListContainer title="Welcome to the Shop" />
+						</Suspense>
+					} />
+					<Route index path={AppPaths.products(':slug')} element={
+						<Suspense fallback={<div>Cargando...</div>}>
 							<ItemDetailContainer />
 						</Suspense>
 					} />

@@ -21,8 +21,6 @@ function Nav({ children }) {
 					<Menu>
 						<MenuItem label="Inicio" to="/" />
 						<MenuItem label="Productos" to={AppPaths.products()} />
-						<MenuItem label="Empresa" to="/empresa" />
-						<MenuItem label="Contacto" to="/contacto" />
 						<li><CartWidget href="#" /></li>
 					</Menu>
 				</Row>
