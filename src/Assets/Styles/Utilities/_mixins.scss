@@ -66,3 +66,13 @@
 		@content;
 	}
 }
+
+/**
+ * Vertical align using position absolute
+ */
+
+@mixin vertical-align($position: absolute, $offset: 50%) {
+	position: $position;
+	top: $offset;
+	transform: translateY(-50%);
+}

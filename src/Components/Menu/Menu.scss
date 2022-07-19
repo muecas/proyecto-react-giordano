@@ -22,11 +22,11 @@
 			margin-right: 1rem;
 			@include last-child(margin-right);
 		
-			a {
+			&-link {
 				display: block;
 				padding: 0.75rem 1rem;
 				border-radius: 0.7rem;
-				transition: background-color 0.25s ease, background-color 0.25s ease;
+				transition: color 0.25s ease, background-color 0.25s ease;
 				color: $lightest-grey;
 				text: {
 					transform: uppercase;
@@ -40,6 +40,10 @@
 				&:hover {
 					background-color: $lemon;
 					color: $text-color;
+				}
+				
+				&--active {
+					color: $lemon;
 				}
 				
 			}

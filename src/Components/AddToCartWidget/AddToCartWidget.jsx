@@ -4,7 +4,6 @@ import './AddToCartWidget.scss';
 
 /**
  * AddToCartWidget component
- * @param {String}           label
  * @param {Number}           initial
  * @param {Number}           max
  * @param {CallableFunction} onAdd
@@ -12,7 +11,9 @@ import './AddToCartWidget.scss';
  * @constructor
  */
 
-function AddToCartWidget({ label = 'Producto', initial = 1, max = 10, onAdd = (amount) => {} }) {
+function AddToCartWidget({ initial = 1, max = 10, onAdd = (amount) => {} }) {
+	initial = Number(initial);
+	max = Number(max);
 	const [ amount, setAmount ] = useState(initial);
 	const decrease = () => {
 		if(amount - 1 > 0) {
@@ -31,7 +32,6 @@ function AddToCartWidget({ label = 'Producto', initial = 1, max = 10, onAdd = (a
 	});
 	return (
 		<div className="add-to-cart-widget">
-			<div className="add-to-cart-widget-label">{label}</div>
 			<div className="add-to-cart-widget-amount">
 				<button onClick={decrease} ref={element => decreaseButton = element}>-</button>
 				<div>{amount}</div>

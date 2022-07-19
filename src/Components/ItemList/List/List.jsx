@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { Row, Column } from '../../../Layout/Grid';
 import Item from '../Item/Item';
 
@@ -25,9 +25,11 @@ function List({ dataSrc }) {
 		}, 2000);
 	}, [dataSrc]);
 	return (
-		<Row className="item-list">
-			{data.products.length ? data.products.map((product, index) => <Item key={index} {...product}></Item>) : <Column className="item-list-loading">Cargando productos...</Column>}
-		</Row>
+		<Column className="item-list">
+			<Row>
+				{data.products.length ? data.products.map((product, index) => <Item key={index} {...product}></Item>) : <Column className="item-list-loading">Cargando productos...</Column>}
+			</Row>
+		</Column>
 	);
 }
 

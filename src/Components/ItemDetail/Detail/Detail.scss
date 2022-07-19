@@ -1,0 +1,106 @@
+@import "../../../Assets/Styles/Config/colors";
+@import "../../../Assets/Styles/Config/variables";
+@import "../../../Assets/Styles/Utilities/mixins";
+
+.item-detail {
+	padding: 1.25rem 3rem;
+	
+	&-loading {
+		padding: 1.25rem 3rem;
+		text-align: center;
+	}
+	
+	&-images {
+		width: 30%;
+	}
+	
+	&-image {
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 56%;
+		background-color: $lightest-grey;
+		border-radius: 0.75rem;
+		border: 1px solid $lighter-grey;
+		
+		img {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			transition: opacity 0.25s ease, transform 0.25s ease;
+		}
+		
+		&--loaded img {
+			opacity: 1;
+		}
+		
+	}
+	
+	&-information {
+		width: 67.5%;
+		margin-left: 2.5%;
+		
+		&-main {
+			width: 80%;
+		}
+		
+		&-sidebar {
+			width: 20%;
+		}
+		
+		&-title {
+			margin-bottom: 1rem;
+			
+			h6 {
+				margin-bottom: 0.25rem;
+				font-size: 0.85rem;
+				
+				a {
+					text-decoration: underline;
+					color: $dark-grey;
+				}
+				
+				strong {
+					font-weight: $font-weight-bold;
+				}
+				
+			}
+			
+			h2 {
+				@include comfortaa {
+					font-size: 1.5rem;
+				}
+			}
+			
+		}
+		
+		&-price {
+			text-align: right;
+			
+			&-tag {
+				margin-bottom: 1rem;
+				padding: 0.5rem 0.75rem;
+				background-color: $lemon;
+				border-radius: 0.75rem;
+				font: {
+					weight: $font-weight-bold;
+					size: 1.25rem;
+				}
+				text-align: center;
+			}
+			
+		}
+		
+		&-description {
+			
+			p {
+				font-size: 1rem;
+				line-height: 1.2;
+			}
+			
+		}
+		
+	}
+	
+}

@@ -1,6 +1,7 @@
 import Row from '../Grid/Row/Row'
 import { Menu, MenuItem } from '../../Components/Menu';
 import CartWidget from '../../Components/CartWidget/CartWidget';
+import AppPaths from '../../Services/Utils/AppPaths';
 
 import './Nav.scss';
 
@@ -18,9 +19,10 @@ function Nav({ children }) {
 				<Row alignItems="center">
 					<div className="nav-branding">Shop branding</div>
 					<Menu>
-						<MenuItem label="Productos" href="#" />
-						<MenuItem label="Empresa" href="#" />
-						<MenuItem label="Contacto" href="#" />
+						<MenuItem label="Inicio" to="/" />
+						<MenuItem label="Productos" to={AppPaths.products()} />
+						<MenuItem label="Empresa" to="/empresa" />
+						<MenuItem label="Contacto" to="/contacto" />
 						<li><CartWidget href="#" /></li>
 					</Menu>
 				</Row>

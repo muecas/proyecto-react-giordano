@@ -4,12 +4,63 @@
 
 .list-item-element {
 	overflow: hidden;
+	position: relative;
 	flex: 0 0 auto;
 	width: 24%;
 	max-width: 100%;
 	margin-right: calc(4% / 3);
 	border-radius: 0.75rem;
 	border: 1px solid $lighter-grey;
+	
+	&-link {
+		overflow: hidden;
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-indent: -9999px;
+		
+		&:hover + .list-item-element-button-holder {
+			background-color: rgba(0, 0, 0, .75);
+			
+			.list-item-element-button {
+				opacity: 1;
+			}
+			
+			+ .list-item-element-image img {
+				transform: scale(1.05, 1.05);
+			}
+			
+		}
+		
+	}
+	
+	&-button-holder {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: background-color 0.25s ease;
+		text-align: center;
+	}
+	
+	&-button {
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: auto;
+		padding: 0.75rem 1.25rem;
+		transform: translate(-50% , -50%);
+		transition: opacity 0.25s ease;
+		background-color: $lemon;
+		border-radius: 0.75rem;
+		white-space: nowrap;
+	}
 	
 	&-image {
 		overflow: hidden;
@@ -23,7 +74,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			transition: opacity 0.25s ease;
+			transition: opacity 0.25s ease, transform 0.25s ease;
 		}
 		
 		&--loaded img {
@@ -33,7 +84,7 @@
 	}
 	
 	&-title {
-		padding: 0.75rem;
+		padding: 0.75rem 1rem;
 		font: {
 			size: 1.15rem;
 			weight: $font-weight-bold;
@@ -45,9 +96,22 @@
 	}
 	
 	&-description {
-		padding: 0.75rem;
+		padding: 0.75rem 1rem;
 		font-size: 0.95rem;
 		line-height: 1.4;
+	}
+	
+	&-price {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		padding: 0.5rem 0.75rem;
+		background-color: $lemon;
+		border-radius: 0.75rem;
+		font: {
+			weight: $font-weight-bold;
+			size: 1.05rem;
+		}
 	}
 	
 }

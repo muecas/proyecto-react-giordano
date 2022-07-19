@@ -15,10 +15,12 @@ function Container({ title, children } = { title : 'Bienvenidos' }) {
 	return (
 		<Row>
 			<Column>
-				<div className="item-list-container">
-					<h2 className="item-list-container-title">{title}</h2>
+				<Row className="item-list-container">
+					<Column className="item-list-container-title">
+						<h2>{title}</h2>
+					</Column>
 					<List dataSrc="data/products.json" />
-				</div>
+				</Row>
 			</Column>
 		</Row>
 	);
