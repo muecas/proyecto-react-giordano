@@ -42,11 +42,12 @@
 		margin-left: 2.5%;
 		
 		&-main {
-			width: 80%;
+			width: 75%;
 		}
 		
 		&-sidebar {
 			width: 20%;
+			margin-left: 5%;
 		}
 		
 		&-title {
@@ -95,8 +96,8 @@
 		&-description {
 			
 			p {
-				font-size: 1rem;
-				line-height: 1.2;
+				font-size: 1.05rem;
+				line-height: 1.4;
 			}
 			
 		}

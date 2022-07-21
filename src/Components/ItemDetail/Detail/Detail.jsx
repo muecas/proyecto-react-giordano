@@ -2,9 +2,9 @@ import { useEffect, useState, useRef } from 'react';
 import { Row, Column } from '../../../Layout/Grid';
 import { Link } from 'react-router-dom';
 import AppPaths from '../../../Services/Utils/AppPaths';
+import AddToCartWidget from '../../AddToCartWidget/AddToCartWidget';
 
 import './Detail.scss';
-import AddToCartWidget from '../../AddToCartWidget/AddToCartWidget';
 
 /**
  * Detail component
@@ -49,7 +49,7 @@ function Detail({ slug }) {
 												<h6><Link to={AppPaths.categories(data.category.slug)}>{data.category.label}</Link> | SKU {data.sku} {data.stock > 0 ? <> | <strong>Stock disponible</strong></> : ''}</h6>
 												<h2>{data.title}</h2>
 											</Column>
-											<Column className="item-detail-information-desciption">
+											<Column className="item-detail-information-description">
 												<p>{data.description}</p>
 											</Column>
 										</Row>

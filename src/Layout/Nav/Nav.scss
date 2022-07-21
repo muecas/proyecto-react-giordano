@@ -19,6 +19,18 @@
 			text-transform: uppercase;
 			color: white;
 		}
+		
+		a {
+			transition: color 0.25s ease;
+			text-decoration: none;
+			color: #fff;
+			
+			&:hover {
+				color: $lemon;
+			}
+			
+		}
+		
 	}
 	
 }

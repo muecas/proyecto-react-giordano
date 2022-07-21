@@ -1,5 +1,28 @@
+@import "../../../Assets/Styles/Config/colors";
+@import "../../../Assets/Styles/Config/variables";
+@import "../../../Assets/Styles/Utilities/mixins";
+
 .item-list {
-	padding: 1.25rem 3rem;
+	padding: 2rem 0;
+	
+	&-title {
+		margin-bottom: 2rem;
+		
+		h2 {
+			@include comfortaa {
+				text: {
+					transform: uppercase;
+					align: center;
+				}
+				font-size: 1.5rem;
+			}
+		}
+		
+	}
+	
+	&-container {
+		padding: 1.25rem 3rem;
+	}
 	
 	&-loading {
 		padding: 1.25rem 3rem;

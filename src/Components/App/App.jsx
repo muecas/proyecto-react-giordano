@@ -26,6 +26,11 @@ function App() {
 							<ItemListContainer title="Welcome to the Shop" />
 						</Suspense>
 					} />
+					<Route index path={AppPaths.categories(':slug')}  element={
+						<Suspense fallback={<div>Cargando...</div>}>
+							<ItemListContainer />
+						</Suspense>
+					} />
 					<Route index path={AppPaths.products(':slug')} element={
 						<Suspense fallback={<div>Cargando...</div>}>
 							<ItemDetailContainer />
